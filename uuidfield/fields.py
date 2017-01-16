@@ -1,5 +1,6 @@
 import uuid
 
+from six import with_metaclass
 from django import forms
 from django.db.models import Field, SubfieldBase
 try:
@@ -32,15 +33,13 @@ class StringUUID(uuid.UUID):
         return len(self.__str__())
 
 
-class UUIDField(Field):
+class UUIDField(with_metaclass(SubfieldBase, Field)):
     """
     A field which stores a UUID value in hex format. This may also have the
     Boolean attribute 'auto' which will set the value on initial save to a new
     UUID value. Note that while all UUIDs are expected to be unique we enforce
     this with a DB constraint.
     """
-    # TODO: support binary storage types
-    __metaclass__ = SubfieldBase
 
     def __init__(self, version=4, node=None, clock_seq=None,
                  namespace=None, name=None, auto=False, hyphenate=False,

@@ -10,6 +10,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'django',
+        'six',
     ],
     tests_require=[
         'psycopg2',
