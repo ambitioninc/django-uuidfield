@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='django-uuidfield',
-    version='0.5.0.ambition',
+    name='ambition-django-uuidfield',
+    version='0.5.0',
     author='David Cramer',
     author_email='dcramer@gmail.com',
-    description='UUIDField in Django',
-    url='https://github.com/dcramer/django-uuidfield',
+    description='Ambition fork of dcramer/django-uuidfield, UUIDField in Django',
+    url='https://github.com/ambitioninc/django-uuidfield',
     zip_safe=False,
     install_requires=[
         'django',

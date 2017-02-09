@@ -8,7 +8,7 @@ Installation
 
 Install it with pip (or easy_install)::
 
-	pip install django-uuidfield
+	pip install ambition-django-uuidfield
 
 Usage
 =====
